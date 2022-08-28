@@ -10,10 +10,10 @@ public class MainProgram
 		Driver cards1 = new Driver();
 		Driver cards2 = new Driver();
 		
-		Random rndc1 = new Random();
-		Random rndc2 = new Random();
-		Random rndv1 = new Random();
-		Random rndv2 = new Random();
+		Random rnd = new Random();
+	//	Random rndc2 = new Random();
+	//	Random rndv1 = new Random();
+	//	Random rndv2 = new Random();
 		
 	//	int value = rndc.nextInt(13);
 	//	int suit = rndc.nextInt(4);
@@ -25,11 +25,11 @@ public class MainProgram
 		 
 		 
 		
-		cards1.PlayingCard(rndc1.nextInt(4), rndv1.nextInt(13));
-		cards2.PlayingCard(rndc2.nextInt(4), rndv2.nextInt(13));
+		cards1.PlayingCard(rnd.nextInt(4) + 1, rnd.nextInt(13) + 1);
+		cards2.PlayingCard(rnd.nextInt(4) + 1, rnd.nextInt(13) + 1);
 		
-		if ((cards1.getValue() == cards2.getValue()) || 
-				(cards1.getSuit() == cards2.getSuit()))
+		if ((cards1.getValue().equals(cards2.getValue()) || 
+				(cards1.getSuit().equals(cards2.getSuit()))))
 		{
 			equale = true;
 		}
